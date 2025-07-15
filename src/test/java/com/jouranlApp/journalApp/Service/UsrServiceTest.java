@@ -36,7 +36,7 @@ public class UsrServiceTest {
             "3,2,4"
     })
     public void testExample(int a , int b , int expected){
-              assertEquals(expected ,a +b);
+              assertEquals(expected ,a +b,"Faild for " +expected);
     }
 
 }
