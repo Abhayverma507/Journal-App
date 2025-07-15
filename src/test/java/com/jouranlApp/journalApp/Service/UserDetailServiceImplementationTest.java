@@ -4,11 +4,9 @@ import com.jouranlApp.journalApp.Entity.UserEntry;
 import com.jouranlApp.journalApp.repository.UserEntryRepository;
 import com.jouranlApp.journalApp.service.UserDetailServiceImplementation;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentMatcher;
-import org.mockito.ArgumentMatchers;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.mockito.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -28,6 +26,11 @@ public class UserDetailServiceImplementationTest {
 
     @InjectMocks
     private UserDetailServiceImplementation userDetailServiceImplementation;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.initMocks("this");
+    }
 
     @Test
     void testLoadUserByUsername() {
