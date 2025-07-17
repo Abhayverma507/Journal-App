@@ -39,7 +39,7 @@ public class UserService {
         }
         catch (Exception e) {
            log.error("ERROR OCCURRED for {} ", userEntry.getUsername());
-            log.warn("FUCK YOU");
+           // log.warn("FUCK YOU");
             log.info("FUCK YOU");
            log.debug("FUCK YOU");
         }
