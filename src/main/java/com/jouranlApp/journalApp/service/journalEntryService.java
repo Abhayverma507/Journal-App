@@ -5,6 +5,8 @@ import com.jouranlApp.journalApp.Entity.JournalEntry;
 import com.jouranlApp.journalApp.Entity.UserEntry;
 import com.jouranlApp.journalApp.repository.journalEntryRepository;
 import jakarta.transaction.Transactional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +27,7 @@ public class journalEntryService {
     private UserService userServices;
 
 
-    public List<JournalEntry> getAll() {
+  public List<JournalEntry> getAll() {
         return journalEntryRepository.findAll();
     }
 

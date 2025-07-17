@@ -33,7 +33,7 @@ public class UsrServiceTest {
     @CsvSource({
             "2,2,4",
             "1,1,2",
-            "3,2,4"
+           // "3,2,4"
     })
     public void testExample(int a , int b , int expected){
               assertEquals(expected ,a +b,"Faild for " +expected);

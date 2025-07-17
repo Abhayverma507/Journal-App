@@ -39,6 +39,7 @@ public class userController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         userEntryRepository.deleteByUsername(authentication.getName());
         return new ResponseEntity<>(HttpStatus.OK);
+
     }
 
 
