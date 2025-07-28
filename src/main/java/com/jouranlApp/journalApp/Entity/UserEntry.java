@@ -20,6 +20,9 @@ public class UserEntry {
     @Column(unique = true, nullable = false)
     private String username;
 
+    private String email;
+    private boolean sentimentAnalysis;
+
     @Column(nullable = false)
     private String password;
 
