@@ -15,6 +15,7 @@ public class UserRepositoryImpl {
 
 
     public List<UserEntry> getUserForSa(){
+        //This is a pattern
         List<UserEntry> users = userEntryRepository.findByEmailRegexAndSentimentAnalysis("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$");
 
         return users;
