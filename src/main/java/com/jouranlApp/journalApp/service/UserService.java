@@ -2,6 +2,7 @@ package com.jouranlApp.journalApp.service;
 
 import com.jouranlApp.journalApp.Entity.UserEntry;
 import com.jouranlApp.journalApp.repository.UserEntryRepository;
+import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,6 +52,7 @@ public class UserService {
         userEntryRepository.save(userEntry);
     }
 
+    @Transactional
     public Optional<UserEntry> getUserEntryById(Integer id) {
         return userEntryRepository.findById(id);
 

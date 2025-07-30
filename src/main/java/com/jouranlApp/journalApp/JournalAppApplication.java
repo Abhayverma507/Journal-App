@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,15 +14,16 @@ import java.util.Arrays;
 
 @SpringBootApplication
 //@EnableTransactionManagement
+@EnableScheduling
 public class JournalAppApplication {
     public static void main(String[] args) {
         SpringApplication.run(JournalAppApplication.class, args);
     }
 
     @Bean
-     public RestTemplate restTemplate(){
+    public RestTemplate restTemplate(){
         return  new  RestTemplate();
-     }
+    }
 }
 
 
