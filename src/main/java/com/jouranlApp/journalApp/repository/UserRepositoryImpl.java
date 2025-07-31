@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class UserRepositoryImpl {
+public class    UserRepositoryImpl {
 
     @Autowired
     private  UserEntryRepository userEntryRepository;

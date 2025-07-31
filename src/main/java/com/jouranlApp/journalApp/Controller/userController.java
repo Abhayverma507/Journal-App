@@ -30,9 +30,10 @@ public class userController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
         UserEntry old = Service.findByUsername(username);
-        old.setUsername(userEntry.getUsername());
-        old.setPassword(userEntry.getPassword());
-        old.setRoles(userEntry.getRoles());
+          old.setUsername(userEntry.getUsername());
+          old.setPassword(userEntry.getPassword());
+          old.setRoles(userEntry.getRoles());
+        old.setEmail(userEntry.getEmail());
         Service.createNewUser(old);
         return new ResponseEntity<>(old, HttpStatus.OK);
 
