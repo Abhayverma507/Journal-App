@@ -23,6 +23,7 @@ dependencies {
 	implementation("com.mysql:mysql-connector-j:9.2.0")
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-mail")
+	implementation("org.springframework.boot:spring-boot-starter-data-redis")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testAnnotationProcessor("org.projectlombok:lombok:1.18.38")

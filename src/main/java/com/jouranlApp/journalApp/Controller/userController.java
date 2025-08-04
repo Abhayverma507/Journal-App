@@ -57,7 +57,7 @@ public class userController {
         if (weatherResponse != null) {
             greeting="Weather feels like "+weatherResponse.getCurrent().getFeelslike();
         }
-        return new ResponseEntity<>("Hi " + authentication.getName()+" "+ greeting, HttpStatus.OK);
+            return new ResponseEntity<>("Hi " + authentication.getName()+" "+ greeting, HttpStatus.OK);
 
     }
 }
