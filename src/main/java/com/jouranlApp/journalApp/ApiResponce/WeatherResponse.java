@@ -11,8 +11,8 @@ import java.util.List;
 @Getter
 @Setter
 public class WeatherResponse {
-
-    private Current current;
+    @JsonProperty("current")
+    private  Current current;
 
     @Getter
     @Setter
